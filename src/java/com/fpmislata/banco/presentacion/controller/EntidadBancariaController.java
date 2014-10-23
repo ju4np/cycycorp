@@ -58,7 +58,7 @@ public class EntidadBancariaController {
     public void update(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, @RequestBody String jsonEntrada) {
 
         entidadBancariaDAO.update(jsonConverter.fromJson(jsonEntrada, EntidadBancaria.class));
-        httpServletResponse.setStatus(204);
+//        httpServletResponse.setStatus(204);
 
     }
 

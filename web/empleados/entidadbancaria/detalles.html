@@ -15,14 +15,17 @@
         <h2>Entidad Bancaria</h2>
 
         <table>
-            <tr><td width="80"><strong>id: </strong></td><td><input type="text" ng-model="entidadBancaria.idEntidadBancaria"/> </td></tr>
+            <tr><td width="80"><strong>id: </strong></td><td><input type="text" ng-disabled="editar===true" ng-model="entidadBancaria.idEntidadBancaria"/> </td></tr>
             <tr><td><strong>nombre: </strong></td><td><input type="text" ng-model="entidadBancaria.nombre"/> </td></tr>
             <tr><td><strong>codigo: </strong></td><td><input type="text" ng-model="entidadBancaria.codigoEntidad"/> </td></tr>
         </table>
-        <br/>
-        <br/><button id="insertar" ng-click="insertarRegistro()">Insertar registro</button><br/>
+        <br/><br/>
+        
+        <input type="checkbox" ng-model="insertar"/>Insertar<br/><br/>
+        <input type="checkbox" ng-model="editar"/>Editar<br/><br/>
+        <br/><button ng-show="insertar===true" ng-click="insertarRegistro()">Insertar registro</button><br/>
 
-        <br/><button id="editar" ng-click="modificarRegistro()">Editar registro</button><br/>
+        <br/><button ng-show="editar===true" ng-click="modificarRegistro()">Editar registro</button><br/>
 
     </body>
 </html> 

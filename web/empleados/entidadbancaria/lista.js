@@ -23,7 +23,7 @@ app.controller("EntidadBancariaListController", function($scope, $http) {
 
 
     $scope.editar = function(id) {
-        alert(id);
+        location.href="http://localhost:8084/cycybank/empleados/entidadbancaria/detalles.html?action=edit?idEntidadBancaria="+id;
     };
 
 

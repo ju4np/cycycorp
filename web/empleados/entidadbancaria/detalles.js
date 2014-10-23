@@ -1,17 +1,21 @@
 
 var app = angular.module("app", []);
 
-function EntidadBancariaDetailController($scope, $http) {
+function EntidadBancariaDetailController($scope, $http, $location) {
 
     $scope.titulo = "Banco";
-    
+
     var ideb;
-    
+
     $scope.entidadBancaria = {
         idEntidadBancaria: "",
         nombre: "",
         codigoEntidad: ""
     };
+
+
+    alert($location.absUrl().toString());
+
 
     $scope.buscarRegistro = function(id) {
         $http({
