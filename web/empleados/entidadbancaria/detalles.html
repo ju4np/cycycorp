@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+    <head>
+        <title>Prueba</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../../lib/angular/js/angular.js"></script>
+        <script type="text/javascript" src="detalles.js"></script>
+        <script type="text/javascript" src="../../path.js.jsp"></script>
+    </head>
+    <body ng-controller="EntidadBancariaDetailController">
+        <a href="http://es.calcuworld.com/calculadoras-de-embarazo/calculadora-de-probabilidades-de-embarazo/"><div style="color:green">¡Haz el test! ¿Crees que estás embarazada?</div></a>
+
+        <h2>Entidad Bancaria</h2>
+
+        <table>
+            <tr><td width="80"><strong>id: </strong></td><td><input type="text" ng-model="entidadBancaria.idEntidadBancaria"/> </td></tr>
+            <tr><td><strong>nombre: </strong></td><td><input type="text" ng-model="entidadBancaria.nombre"/> </td></tr>
+            <tr><td><strong>codigo: </strong></td><td><input type="text" ng-model="entidadBancaria.codigoEntidad"/> </td></tr>
+        </table>
+        <br/>
+        <br/><button id="insertar" ng-click="insertarRegistro()">Insertar registro</button><br/>
+
+        <br/><button id="editar" ng-click="modificarRegistro()">Editar registro</button><br/>
+
+    </body>
+</html> 

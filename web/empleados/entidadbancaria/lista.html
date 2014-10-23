@@ -1,0 +1,36 @@
+
+<html ng-app="app2">
+    <head>
+        <title>Find All Bank Entities</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="../../lib/angular/js/angular.js"></script>
+        <script type="text/javascript" src="lista.js"></script>
+        <script type="text/javascript" src="../../path.js.jsp"></script>
+    </head>
+    <body ng-controller="EntidadBancariaListController">
+        <h1>Entidades Bancarias: </h1>
+        
+        <table border="1">
+            <tr>
+                <th>Id Entidad</th>
+                <th>Nombre Entidad</th>
+                <th>Código Entidad</th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+            <tr ng-repeat="entidadBancaria in entidadesBancarias">
+                <td>{{entidadBancaria.idEntidadBancaria}}</td>
+                <td>{{entidadBancaria.nombre}}</td>
+                <td>{{entidadBancaria.codigoEntidad}}</td>
+                <td><button ng-click="editar(entidadBancaria.idEntidadBancaria)">Editar</button></td>
+                <td><button ng-click="borrarRegistro(entidadBancaria.idEntidadBancaria)">Borrar</button></td>
+            </tr>
+        </table>
+        
+        <br/>
+        <a href="detalles.html">Nueva Entidad Bancaria</a>
+        
+    </body>
+</html>
